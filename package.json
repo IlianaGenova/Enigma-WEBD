@@ -1,0 +1,28 @@
+{
+  "name": "enigma-webd",
+  "version": "1.0.0",
+  "description": "A site to explain the perfect complexity of the Enigma machine in details",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlianaGenova/Enigma-WEBD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlianaGenova/Enigma-WEBD/issues"
+  },
+  "homepage": "https://github.com/IlianaGenova/Enigma-WEBD#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
