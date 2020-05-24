@@ -1,38 +1,32 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
-
-gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
+//
 // gulp.task('sass', function() {
 //   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
 //     .pipe(sass())
 //     .pipe(gulp.dest('app/css'))
-//     .pipe(browserSync.stream());
+//     .pipe(browserSync.reload({
+//       stream: true
+//     }))
 // });
-
-gulp.task('browserSync', function(cb) {
-  browserSync.init({
-    server: {
-      baseDir: 'app'
-    },
-  })
-  cb()
-})
-
-gulp.task('watch', gulp.series(['browserSync', 'sass']), function (){
-  gulp.watch('app/scss/**/*.scss', gulp.series(['sass']))
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('app/*.html', browserSync.reload)
-  gulp.watch('app/js/**/*.js', browserSync.reload)
-
-});
+//
+// gulp.task('browserSync', function(cb) {
+//   browserSync.init({
+//     server: {
+//       baseDir: 'app'
+//     },
+//   })
+//   cb()
+// })
+//
+// gulp.task('watch', gulp.series(['browserSync', 'sass']), function (){
+//   gulp.watch('app/scss/**/*.scss', gulp.series(['sass']))
+//   // Reloads the browser whenever HTML or JS files change
+//   gulp.watch('app/*.html', browserSync.reload)
+//   gulp.watch('app/js/**/*.js', browserSync.reload)
+//
+// });
 
 
 //
@@ -89,9 +83,6 @@ function style() {
         .pipe(browserSync.stream());
 }
 
-
-
-
 // A simple task to reload the page
 function reload() {
     browserSync.reload();
@@ -113,7 +104,7 @@ function watch() {
     // This can be html or whatever you're using to develop your website
     // Note -- you can obviously add the path to the Paths object
     //gulp.watch("src/*.html", reload);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
 }
 
 // We don't have to expose the reload function
