@@ -17,8 +17,8 @@ $light-brown: rgba(250,225,175, 1);
 
 
 //gradients
-$gradient-mint: linear-gradient(90deg, $mint, $light-blue);
-$gradient-blue: linear-gradient(90deg, $dark-blue, $light-blue);
+$gradient-mint: linear-gradient(90deg, $light-blue, $light-blue, $light-blue);
+$gradient-blue: linear-gradient(90deg, $dark-blue, $light-blue, $mint);
 $gradient-brown: linear-gradient(90deg, $dark-brown, $light-brown);
 $gradient-top-left: linear-gradient(225deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 $gradient-bottom-left: linear-gradient(315deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
@@ -39,14 +39,13 @@ body {
 .grid-container {
 	// height: 100hv;
 	display: grid;
-	grid-template-columns: 100px 75px 75px 1fr 100px 170px 170px 170px;
-	grid-template-rows: 70px 100px 350px auto;
-
+	grid-template-columns: 100px 75px 75px 450px 1fr 100px 170px 170px 170px 20px;
+	grid-template-rows: 80px 100px 550px 415px 1fr 50px;
 	// grid-template-areas:
 	// 	"topnav topnav topnav topnav topnav";
 
 	.top-nav {
-		grid-column: 1/9;
+		grid-column: 1/11;
 		grid-row: 1/2;
 
 		background-color: $dark-blue;
@@ -63,30 +62,76 @@ body {
 
 		.logo {
 			padding-left: 100px;
-			width: 150px;
-			height: 60px;
+			width: 170px;
+			height: 70px;
 			grid-area: logo;
 
 			opacity: 1;
 		}
 
 		.buttons {
-			//width: 600px;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-around;
 			align-items: baseline;
-
+			margin-right: 20px;
 		}
 
 	}
 
-	.banner {
-		grid-column: 1/8;
-		grid-row: 2/3;
+	.banner-wrapper {
+		grid-column: 1/11;
+		grid-row: 4/5;
 
-		height: 420px;
-		max-width: device-width;
+		position: relative;
+		text-align: center;
+		color: white;
+		color: $light-blue;
+		font: 1.2em Arial, sans-serif;
+		text-decoration: none;
+
+		.banner {
+			max-width: 100%;
+			height: auto;
+			width: auto;
+
+			opacity: 0.85;
+			display:block;
+			margin: 0px;
+		}
+
+		.card {
+			position: absolute;
+			width: 550px;
+			height: 350px;
+		}
+
+		.text-card {
+			top: 60px;
+			left: 170px;
+			z-index: 2;
+
+			border: 3px 2px solid $mint;
+			// border-radius: 30px;
+			background: $gradient-mint;
+			transition: .15s ease-out;
+			box-shadow: 0px 5px 15px $blue;
+		}
+
+		.text-card:hover {
+			transition: all .1s ease-in;
+			transform: scale(1.05);
+			border: 1px 3px solid $dark-blue;
+		}
+
+		.shadowed {
+			position:absolute;
+			z-index: 1;
+			top: 100px;
+			left: 130px;
+			background-color: white;
+			border: 1px 3px solid $blue;
+		}
 	}
 
 	.title-wrapper {
@@ -95,7 +140,7 @@ body {
 	}
 
 	.enigma-pic {
-		grid-column: 6/8;
+		grid-column: 7/10;
 		grid-row: 3/4;
 
 		img {
@@ -103,14 +148,28 @@ body {
 			height: 400px;
 			object-fit: contain;
 		}
+
+		h3 {
+			margin: 0px;
+			color: $darkest;
+			font: 1.2em Arial, sans-serif;
+			text-decoration: none;
+			letter-spacing: 2.5px;
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+		}
+
+		button:hover {
+			opacity: 0.75;
+		}
+
 	}
+
+
 }
-
-
-@media (min-width: 900px) {
-  .grid-container { grid-template-columns: repeat(2, 1fr); }
-}
-
 
 .icon, .button {
 	display: flex;
@@ -146,15 +205,6 @@ body {
 	background-size: 100% 2px, auto;
 }
 
-//
-// .the {
-// 	font-family: Futura, sans-serif;
-// 	font-weight: 900;
-// 	font-size: 80px;
-// 	padding: 0px;
-// 	margin: 0px;
-// 	color: $dark-blue;
-// }
 
 $t: 2.5s;
 $d: 0.08em;
@@ -167,9 +217,8 @@ $back: $blue;
 	font-family: Futura, sans-serif;
 	font-weight: 900;
 	font-size: 80px;
-	// padding: 80px;
 
-	background: linear-gradient(to right, $darkest, $dark-blue);
+	background: linear-gradient(to right, $darkest, $dark-blue, $dark-blue);
     background-size: 0% 10px;
     background-repeat: no-repeat;
     background-position: left bottom;
