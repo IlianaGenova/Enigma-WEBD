@@ -1,14 +1,20 @@
+// $light-blue: #aecdfa;
+// $dark-blue: #587AAD;
+// $salmon: #FAB498;
+// $light-green: #A5FAA7;
+// $dark-green: #7BAD7C;
+
 // //colours
 // $darkest: rgba(6, 15, 47, 1);
 // $light-blue: rgba(169, 201, 250, 1);
 // $dark-blue: rgba(88, 122, 173, 1);
 // $grey: rgba(220, 220, 221, 1);
- $mint: rgba(205, 247, 246, 1);
 // $olive-green: rgba(78, 103, 102, 1);
 // $dark-green: rgba(56, 66, 59, 1);
 
 /* Color Theme Swatches in RGBA */
 $darkest: rgba(6, 15, 47, 1);
+ $mint: rgba(205, 247, 246, 1);
 $dark-blue: rgba(104,132,173, 1);
 $light-blue: rgba(204,224,255, 1);
 $blue: rgba(174,205,250, 1);
@@ -24,151 +30,19 @@ $gradient-top-left: linear-gradient(225deg, #060f2fff, #a9c9faff, #dcdcddff, #cd
 $gradient-bottom-left: linear-gradient(315deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 $gradient-radial: radial-gradient(#060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 
-// $light-blue: #aecdfa;
-// $dark-blue: #587AAD;
-// $salmon: #FAB498;
-// $light-green: #A5FAA7;
-// $dark-green: #7BAD7C;
-
 body {
 	background: $light-blue;
 	margin: 0px;
 	box-sizing: border-box;
 }
 
-.grid-container {
-	// height: 100hv;
-	display: grid;
-	grid-template-columns: 100px 75px 75px 450px 1fr 100px 170px 170px 170px 20px;
-	grid-template-rows: 80px 100px 550px 415px 1fr 50px;
-	// grid-template-areas:
-	// 	"topnav topnav topnav topnav topnav";
 
-	.top-nav {
-		grid-column: 1/11;
-		grid-row: 1/2;
-
-		background-color: $dark-blue;
-		// border-bottom: 2px solid $light-brown;
-		opacity: 0.85;
-		//box-shadow: 10px 0px 15px -2px rgba(0, 0, 0, 0.8);
-		box-shadow: 0px 5px 30px $darkest;
-
-		//grid-area: topnav;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-
-		.logo {
-			padding-left: 100px;
-			width: 170px;
-			height: 70px;
-			grid-area: logo;
-
-			opacity: 1;
-		}
-
-		.buttons {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: baseline;
-			margin-right: 20px;
-		}
-
-	}
-
-	.banner-wrapper {
-		grid-column: 1/11;
-		grid-row: 4/5;
-
-		position: relative;
-		text-align: center;
-		color: white;
-		color: $light-blue;
-		font: 1.2em Arial, sans-serif;
-		text-decoration: none;
-
-		.banner {
-			max-width: 100%;
-			height: auto;
-			width: auto;
-
-			opacity: 0.85;
-			display:block;
-			margin: 0px;
-		}
-
-		.card {
-			position: absolute;
-			width: 550px;
-			height: 350px;
-		}
-
-		.text-card {
-			top: 60px;
-			left: 170px;
-			z-index: 2;
-
-			border: 3px 2px solid $mint;
-			// border-radius: 30px;
-			background: $gradient-mint;
-			transition: .15s ease-out;
-			box-shadow: 0px 5px 15px $blue;
-		}
-
-		.text-card:hover {
-			transition: all .1s ease-in;
-			transform: scale(1.05);
-			border: 1px 3px solid $dark-blue;
-		}
-
-		.shadowed {
-			position:absolute;
-			z-index: 1;
-			top: 100px;
-			left: 130px;
-			background-color: white;
-			border: 1px 3px solid $blue;
-		}
-	}
-
-	.title-wrapper {
-		grid-column: 3/5;
-		grid-row: 3/4;
-	}
-
-	.enigma-pic {
-		grid-column: 7/10;
-		grid-row: 3/4;
-
-		img {
-			width: 450px;
-			height: 400px;
-			object-fit: contain;
-		}
-
-		h3 {
-			margin: 0px;
-			color: $darkest;
-			font: 1.2em Arial, sans-serif;
-			text-decoration: none;
-			letter-spacing: 2.5px;
-		}
-
-		button {
-			background-color: transparent;
-			border: none;
-		}
-
-		button:hover {
-			opacity: 0.75;
-		}
-
-	}
-
-
+h2 {
+	margin: 0px;
+	color: $darkest;
+	font: 1.5em Arial, sans-serif;
+	text-decoration: none;
+	letter-spacing: 2.3px;
 }
 
 .icon, .button {
@@ -184,11 +58,12 @@ body {
 }
 .button {
 	color: $light-blue;
-	font: 1.2em Arial, sans-serif;
+	font: 1.4em Arial, sans-serif;
 	text-decoration: none;
 
 	background-color: $dark-blue;
 	border: 2px 1px solid $dark-blue;
+	outline: none;
 
 	height: 70px;
 	width: 170px;
@@ -205,7 +80,95 @@ body {
 	background-size: 100% 2px, auto;
 }
 
+.logo {
+	padding-left: 100px;
+	width: 170px;
+	height: 70px;
+	opacity: 1;
+}
 
+.banner {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+
+	opacity: 0.85;
+	display:block;
+	margin: 0px;
+}
+
+.card {
+	position: absolute;
+	width: 550px;
+	height: 350px;
+
+	transition: .15s ease-out;
+}
+
+.text-card {
+	top: 45px;
+	left: 170px;
+	z-index: 2;
+
+	border: 3px 2px solid $mint;
+	// border-radius: 30px;
+	background: $gradient-mint;
+	box-shadow: 0px 5px 15px $blue;
+
+
+	overflow: hidden;
+
+	.card-text {
+		// color: $darkest;
+		text-align: center;
+		padding: 25px 15px;
+	}
+
+	.header {
+		background-color: $dark-blue;
+		padding: 0px;
+		border-bottom: 2px 2px solid $mint;
+	}
+
+	div {
+		font-size: 1em;
+		color: $darkest;
+	}
+
+	h2 {
+		font-size: 1.7em;
+		letter-spacing: 2px;
+		// color: $mint;
+		background: -webkit-linear-gradient(90deg, $light-blue, $mint, $mint);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+}
+
+// .text-card:hover {
+// 	transition: all .1s ease-in;
+// 	transform: scale(1.05);
+// 	border: 1px 3px solid $dark-blue;
+// }
+
+.shadowed {
+	position: absolute;
+	z-index: 1;
+	top: 85px;
+	left: 130px;
+	background-color: white;
+	border: 1px 3px solid $blue;
+}
+
+.shadowed:hover {
+	z-index: 3;
+	transition: .2s ease-in;
+	transform: scale(1.01);
+}
+
+
+//text effects below
 $t: 2.5s;
 $d: 0.08em;
 $n: 3;
@@ -263,6 +226,7 @@ span {
 }
 
 
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 .enigma {
@@ -291,39 +255,3 @@ span {
 		to { width: 100% }
 	}
 }
-
-
-
-
-// cool glow eff
-// font-family: Futura, sans-serif;
-// font-weight: 900;
-// font-size: 80px;
-// background: 50% 100% / 50% 50% no-repeat
-// 	radial-gradient(ellipse at bottom, $dark-blue, transparent, transparent);
-// webkit-background-clip: text;
-// background-clip: text;
-// color: transparent;
-// animation: reveal 2000ms ease-in-out forwards 200ms,
-// 	glow 4000ms linear infinite 3000ms;
-//
-// @keyframes reveal {
-// 80%{
-// 	letter-spacing: 8px;
-// }
-// 100% {
-// 	background-size: 300% 300%;
-// }
-// }
-// @keyframes glow {
-// 	40% {
-// 		text-shadow: 0 0 8px $blue;
-// 	}
-// }
-
-//card
-// background-color: white;
-// border-radius: 2px;
-// box-shadow: 5px 2px 10px $darkest;
-
-// letter-spacing: .25em;
