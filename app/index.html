@@ -11,7 +11,7 @@
 <body>
 	<div class="grid-container">
 		<header class="top-nav">
-			<img src="/static/logo.png" alt="Enigma machine" class="logo">
+			<button class="main" type="button" name="button" onclick="mainRedirect()"><img src="/static/logo.png" alt="Enigma machine" class=""></button>
 
 			<div class="buttons">
 				<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
@@ -38,7 +38,7 @@
 			</button>
 		</div>
 		<div class="banner-wrapper">
-			<img class="banner" src="/static/long-keyboard.jpeg" alt="">
+			<img class="banner" src="/static/enigma2.jpeg" alt="">
 			<div class="card text-card">
 				<div class="card-text header">
 					<h2 class="card-text">A WORD ABOUT ME</h2>
@@ -78,6 +78,9 @@
 	function historyRedirect() {
 	  window.location.href = "historical-data.html";
 	}
+	function mainRedirect() {
+      window.location.href = "index.html";
+    }
 </script>
 
 </html>

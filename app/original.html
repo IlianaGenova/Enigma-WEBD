@@ -11,8 +11,7 @@
 <body>
 	<div class="grid-container">
 		<header class="top-nav">
-			<img src="/static/logo.png" alt="Enigma machine" class="logo">
-
+			<button class="main" type="button" name="button" onclick="mainRedirect()"><img src="/static/logo.png" alt="Enigma machine" class=""></button>
 			<div class="buttons">
 				<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
 				<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png"></button>
@@ -36,21 +35,54 @@
 			<img src="/static/svg/components.svg" alt="This content shall remain an Enigma :)">
 		</div>
 
-		<div class="banner-wrapper">
-			<img class="banner" src="/static/enigma2.jpeg" alt="">
+		<div class="lampboard-banner-wrapper banner-wrapper">
+			<img class="banner" src="/static/long-keyboard.jpeg" alt="">
 		</div>
 
-		<!-- <div class="lampboard"> -->
-			<h2 class="lampboard-title" data-heading="a">SO HOW<br>DOES IT WORK?</h2>
+		<h2 class="lampboard-title title" data-heading="a">LAMP<br>BOARD</h2>
+		<div class="lampboard-pic">
+			<img src="/static/svg/lamp.svg" alt="This content shall remain an Enigma :)">
+		</div>
+		<div class="lampboard-text info-card">
+			The Enigma's lampboard component is displayed up above on the
+			banner picture.
+		</div>
 
+		<div class="keyboard-banner-wrapper banner-wrapper">
+			<img class="banner" src="/static/keyboard.jpg" alt="">
+		</div>
+		<h2 class="keyboard-title title" data-heading="a">KEY<br>BOARD</h2>
+		<div class="keyboard-pic">
+			<img src="/static/svg/button.svg" alt="This content shall remain an Enigma :)">
+		</div>
+		<div class="keyboard-text info-card">
+			The Enigma's keyboard component is displayed up above on the
+			banner picture.
+		</div>
 
-			<div class="lampboard-pic">
-				<img src="/static/fav-photo.jpg" alt="This content shall remain an Enigma :)">
-			</div>
-			<div class="lampboard-text">
+		<div class="plugboard-banner-wrapper banner-wrapper">
+			<img class="banner" src="/static/dramatic-plugboard-lol.jpg" alt="">
+		</div>
+		<h2 class="plugboard-title title" data-heading="a">PLUG<br>BOARD</h2>
+		<div class="plugboard-pic">
+			<img src="/static/svg/plug.svg" alt="This content shall remain an Enigma :)">
+		</div>
+		<div class="plugboard-text info-card">
+			The Enigma's plugboard component is displayed up above on the
+			banner picture.
+		</div>
 
-			</div>
-		<!-- </div> -->
+		<div class="rotors-banner-wrapper banner-wrapper">
+			<img class="banner" src="/static/rotor2.jpg" alt="">
+		</div>
+		<h2 class="rotors-title title" data-heading="a">CORE<br>BOX</h2>
+		<div class="rotors-pic">
+			<img src="/static/svg/conected.svg" alt="This content shall remain an Enigma :)">
+		</div>
+		<div class="rotors-text info-card">
+			The Enigma's rotors component is displayed up above on the
+			banner picture.
+		</div>
 
 		<footer>
 
@@ -70,6 +102,9 @@
     }
 	function historyRedirect() {
       window.location.href = "historical-data.html";
+    }
+	function mainRedirect() {
+      window.location.href = "index.html";
     }
 
 </script>
