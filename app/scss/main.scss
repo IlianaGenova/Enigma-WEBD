@@ -118,8 +118,10 @@ h2 {
 	box-shadow: 0px 2px 25px $dark-blue;
 	padding: 50px 50px;
 	font-family: Futura, sans-serif;
-	font-size: 2em;
+	font-size: 1.5em;
 	color: $text-blue;
+	line-height: 1em;
+	letter-spacing: 0.02em;
 }
 
 .text-card {
