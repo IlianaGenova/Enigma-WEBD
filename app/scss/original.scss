@@ -3,7 +3,7 @@
 .grid-container {
 	// height: 100hv;
 	display: grid;
-	grid-template-columns: 100px 75px 75px 1fr 20px 100px 200px 200px 75px 125px 20px;
+	grid-template-columns: repeat(3, 5%) 35% 1fr 5.5% repeat(3, 13%) 8%;
 	grid-template-rows: 80px 100px 550px 600px 1fr 300px 450px 150px 1100px 300px 450px
 						 150px 1100px 300px 450px 150px 1100px 300px 450px 150px 70px;
 
@@ -28,7 +28,6 @@
 			align-items: baseline;
 			margin-right: 20px;
 		}
-
 	}
 
 	.banner-wrapper {
@@ -52,16 +51,17 @@
 	}
 
 	.enigma-pic {
-		text-align: center;
 		grid-column: 7/11;
 		grid-row: 3/4;
 
+		text-align: center;
 		img {
-			width: 500px;
-			height: 400px;
+			max-width: 500px;
+			max-height: 400px;
+			width: 100%;
+			height: 100%;
 			object-fit: contain;
 		}
-
 	}
 
 	.lampboard-banner-wrapper {
@@ -76,16 +76,19 @@
 		grid-column: 3/6;
 		grid-row: 7/8;
 
-
 		img {
-			width: 500px;
-			height: 400px;
+
+			max-width: 450px;
+			max-height: 400px;
+			height: 100%;
+			width: 100%;
 			object-fit: contain;
 		}
 	}
 	.lampboard-text {
 		grid-column: 6/10;
 		grid-row: 6/8;
+		text-align: center;
 
 		.info-card {
 			float: right;
@@ -100,15 +103,22 @@
 	.keyboard-title {
 		grid-column: 6/10;
 		grid-row: 10/11;
+		text-align: center;
+
 		text-align: right;
+		padding-right: 0.5em;
 	}
 	.keyboard-pic {
 		grid-column: 7/10;
 		grid-row: 11/12;
 
+		text-align: right;
 		img {
-			width: 450px;
-			height: 400px;
+
+			max-width: 450px;
+			max-height: 400px;
+			height: 100%;
+			width: 100%;
 			object-fit: contain;
 		}
 	}
@@ -129,15 +139,20 @@
 		grid-column: 3/5;
 		grid-row: 15/16;
 
+
 		img {
-			width: 450px;
-			height: 400px;
+
+			max-width: 450px;
+			max-height: 400px;
+			height: 100%;
+			width: 100%;
 			object-fit: contain;
 		}
 	}
 	.plugboard-text {
 		grid-column: 6/10;
 		grid-row: 14/16;
+		text-align: center;
 
 		.info-card {
 			float: right;
@@ -152,17 +167,22 @@
 		grid-column: 6/10;
 		grid-row: 18/19;
 		text-align: right;
+		padding-right: 0.5em;
+
 	}
 	.rotors-pic {
 		grid-column: 7/10;
 		grid-row: 19/20;
+		text-align: right;
 
 		img {
-			width: 450px;
-			height: 400px;
+
+			max-width: 450px;
+			max-height: 400px;
+			height: 100%;
+			width: 100%;
 			object-fit: contain;
 		}
-
 	}
 
 	.rotors-text {

@@ -3,7 +3,7 @@
 .grid-container {
 	// height: 100hv;
 	display: grid;
-	grid-template-columns: 100px 75px 75px 450px 1fr 100px 170px 170px 170px 20px;
+	grid-template-columns: repeat(3, 5.5%) 35% 1fr 5.5% repeat(3, 13%) 2%;
 	grid-template-rows: 80px 600px 70px;
 	// grid-template-areas:
 	// 	"topnav topnav topnav topnav topnav";

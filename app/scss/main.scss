@@ -32,6 +32,69 @@ $gradient-top-left: linear-gradient(225deg, #060f2fff, #a9c9faff, #dcdcddff, #cd
 $gradient-bottom-left: linear-gradient(315deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 $gradient-radial: radial-gradient(#060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 
+//
+// // based on 16px default font size:
+// $XXS: 10em; // 160px
+// $XS:  20em; // 320px
+// $S:  34em; // 544px
+// $M:  48em; // 768px
+// $L:  67.5em; // 1080px
+// $XL: 100em; // 1600px
+// $XXL: 125em; // 2000px
+//
+// /* scale the fonts based on device size */
+// html {
+// 	@media (max-width: $XXS) {
+// 		font-size: 50%;
+// 	}
+// 	@media (max-width: $XS) {
+// 		font-size: 60%;
+// 	}
+// 	@media (max-width: $S) {
+// 		font-size: 70%;
+// 	}
+// 	@media (max-width: $M) {
+// 		font-size: 80%;
+// 	}
+// 	@media (max-width: $L) {
+// 		font-size: 190%;
+// 	}
+// 	@media (max-width: $XL) {
+// 		font-size: 100%;
+// 	}
+// 	@media (max-width: $XXL) {
+// 		font-size: 110%;
+// 	}
+// }
+
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1200px;
+$screen-xl: 1600px;
+
+body{
+    font-size:13px;
+    // line-height:1.6;
+
+    @media screen and (min-width:$screen-sm){
+        font-size:14px;
+
+    }
+	//
+    @media screen and (min-width:$screen-lg){
+        font-size:15px;
+		// .the, .enigma, .machine {
+		// 	font-size: 5em;
+		// }
+
+    }
+
+    @media screen and (min-width:$screen-xl){
+        font-size:16px;
+
+    }
+}
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 body {
@@ -39,7 +102,6 @@ body {
 	margin: 0px;
 	box-sizing: border-box;
 }
-
 
 h2 {
 	margin: 0px;
@@ -56,21 +118,21 @@ h2 {
 }
 
 .icon {
-	width: 30px;
-	height: 30px;
-	padding-left: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	padding-left: 0.5em;
 }
 .button {
 	color: $light-blue;
-	font: 1.4em Futura, sans-serif;
+	font: 1.5em Futura, sans-serif;
 	text-decoration: none;
 
 	background-color: $dark-blue;
 	border: 2px 1px solid $dark-blue;
 	outline: none;
 
-	height: 70px;
-	width: 200px;
+	height: 3.5em;
+	width: 10em;
 
 	background-image: $gradient-mint;
 	background-size: 0 5px, auto;
@@ -206,14 +268,14 @@ h2 {
 	.main:hover {
 		opacity: 0.75;
 	}
-
-
 }
+
+
 
 .title {
 	font-family: Futura, sans-serif;
 	font-weight: 900;
-	font-size: 100px;
+	font-size: 5em;
 
 	background: 50% 100% / 50% 50% no-repeat
 		radial-gradient(ellipse at bottom, $darkest, $blue);
@@ -250,8 +312,8 @@ $back: $blue;
 
 .machine, .the {
 	font-family: Futura, sans-serif;
-	font-weight: 900;
-	font-size: 80px;
+	// font-weight: 900;
+	font-size: 5em;
 
 	background: linear-gradient(to right, $darkest, $dark-blue, $dark-blue);
     background-size: 0% 10px;
@@ -271,17 +333,17 @@ $back: $blue;
 	}
 	30%{
 		transform: translate3d(0,0,0);
-		text-shadow: 0em 0em 0 $back;
+		text-shadow: 0em 0em 1px 0 $back;
 		color: $front;
 	}
 	70%{
 		transform: translate3d($d,-$d,0);
-		text-shadow: -$d $d $back;
+		text-shadow: -$d $d 2px $back;
 		color: $front;
 	}
 	100%{
 		transform: translate3d($d,-$d,0);
-		text-shadow: -$d $d $back;
+		text-shadow: -$d $d 3px $back;
 		color: $front;
 	}
 	}
@@ -297,12 +359,10 @@ $back: $blue;
 	// }
 }
 
-
-
 .enigma {
 	font-family: Futura, sans-serif;
-	font-weight: 900;
-	font-size: 80px;
+	font-weight: 700;
+	font-size: 5em;
 	color: $darkest;
 	opacity: 0.8;
 
