@@ -4,7 +4,7 @@
 	// height: 100hv;
 	display: grid;
 	grid-template-columns: repeat(3, 5.5%) 35% 1fr 5.5% repeat(3, 13%) 2%;
-	grid-template-rows: 80px 650px 1fr 70px;
+	grid-template-rows: 80px 1fr 1fr 70px;
 	// grid-template-areas:
 	// 	"topnav topnav topnav topnav topnav";
 
@@ -26,7 +26,7 @@
 			flex-flow: row wrap;
 			justify-content: space-around;
 			align-items: baseline;
-			margin-right: 20px;
+			margin-right: 1em;
 		}
 
 	}

@@ -1,17 +1,3 @@
-// $light-blue: #aecdfa;
-// $dark-blue: #587AAD;
-// $salmon: #FAB498;
-// $light-green: #A5FAA7;
-// $dark-green: #7BAD7C;
-
-// //colours
-// $darkest: rgba(6, 15, 47, 1);
-// $light-blue: rgba(169, 201, 250, 1);
-// $dark-blue: rgba(88, 122, 173, 1);
-// $grey: rgba(220, 220, 221, 1);
-// $olive-green: rgba(78, 103, 102, 1);
-// $dark-green: rgba(56, 66, 59, 1);
-
 /* Color Theme Swatches in RGBA */
 $some-blue: #9cb6de;
 $darkest: rgba(6, 15, 47, 1);
@@ -28,20 +14,7 @@ $text-blue: #364863;
 $gradient-mint: linear-gradient(90deg, $light-blue, $light-blue, $light-blue);
 $gradient-blue: linear-gradient(90deg, $dark-blue, $light-blue, $mint);
 $gradient-brown: linear-gradient(90deg, $dark-brown, $light-brown);
-$gradient-top-left: linear-gradient(225deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
-$gradient-bottom-left: linear-gradient(315deg, #060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
-$gradient-radial: radial-gradient(#060f2fff, #a9c9faff, #dcdcddff, #cdf7f6ff, #4e6766ff, #38423bff);
 
-//
-// // based on 16px default font size:
-// $XXS: 10em; // 160px
-// $XS:  20em; // 320px
-// $S:  34em; // 544px
-// $M:  48em; // 768px
-// $L:  67.5em; // 1080px
-// $XL: 100em; // 1600px
-// $XXL: 125em; // 2000px
-//
 // /* scale the fonts based on device size */
 // html {
 // 	@media (max-width: $XXS) {
@@ -73,16 +46,15 @@ $screen-lg: 1200px;
 $screen-xl: 1600px;
 
 body{
-    font-size:13px;
+    font-size: 100%;
     // line-height:1.6;
 
     @media screen and (min-width:$screen-sm){
-        font-size:14px;
-
+        font-size:50%;
     }
-	//
+
     @media screen and (min-width:$screen-lg){
-        font-size:15px;
+        font-size: 95%;
 		// .the, .enigma, .machine {
 		// 	font-size: 5em;
 		// }
@@ -90,8 +62,7 @@ body{
     }
 
     @media screen and (min-width:$screen-xl){
-        font-size:16px;
-
+        font-size:110%;
     }
 }
 
@@ -108,7 +79,7 @@ h2 {
 	color: $darkest;
 	font: 1.5em Arial, sans-serif;
 	text-decoration: none;
-	letter-spacing: 2.3px;
+	letter-spacing: 0.15em;
 }
 
 .icon, .button {
@@ -147,9 +118,9 @@ h2 {
 }
 
 .logo {
-	padding-left: 100px;
-	width: 170px;
-	height: 70px;
+	padding-left: 2em;
+	width: 8.5em;
+	height: 3.5em;
 	opacity: 1;
 }
 
@@ -157,7 +128,7 @@ h2 {
 	max-width: 100%;
 	height: auto;
 	width: auto;
-	max-height: 1000px;
+	max-height: 50em;
 
 	opacity: 0.85;
 	display:block;
@@ -166,19 +137,19 @@ h2 {
 
 .card {
 	position: absolute;
-	width: 550px;
-	height: 350px;
+	width: 27.5em;
+	height: 17.5em;
 
 	transition: .15s ease-out;
 }
 
 .info-card {
-	width: 400px;
-	height: 700px;
+	width: 20em;
+	height: 30em;
 	background-color: $light-blue;
 	border-radius: 20px;
 	box-shadow: 0px 2px 25px $dark-blue;
-	padding: 50px 50px;
+	padding: 2.5em 2.5em;
 	font-family: Futura, sans-serif;
 	font-size: 1.5em;
 	color: $text-blue;
@@ -187,29 +158,16 @@ h2 {
 }
 
 .text-card {
-	top: 45px;
-	left: 170px;
+	top: 3em;
+	left: 8.5em;
 	z-index: 2;
 
 	border: 3px 2px solid $mint;
 	// border-radius: 30px;
 	background: $gradient-mint;
 	box-shadow: 0px 5px 15px $blue;
-
-
 	overflow: hidden;
 
-	.card-text {
-		// color: $darkest;
-		text-align: center;
-		padding: 25px 15px;
-	}
-
-	.header {
-		background-color: $dark-blue;
-		padding: 0px;
-		border-bottom: 2px 2px solid $mint;
-	}
 
 	div {
 		font-size: 1em;
@@ -218,7 +176,8 @@ h2 {
 
 	h2 {
 		font-size: 1.7em;
-		letter-spacing: 2px;
+		letter-spacing: 0.2em;
+		font-weight: bold;
 		// color: $mint;
 		background: -webkit-linear-gradient(90deg, $light-blue, $mint, $mint);
 		-webkit-background-clip: text;
@@ -226,6 +185,19 @@ h2 {
 	}
 
 }
+
+.card-text {
+	// color: $darkest;
+	text-align: center;
+	padding: 1em 0.8em;
+}
+
+.header {
+	background-color: $dark-blue;
+	padding: 0px;
+	border-bottom: 2px 2px solid $mint;
+}
+
 
 // .text-card:hover {
 // 	transition: all .1s ease-in;
@@ -236,10 +208,12 @@ h2 {
 .shadowed {
 	position: absolute;
 	z-index: 1;
-	top: 85px;
-	left: 130px;
+	top: 4.5em;
+	left: 7em;
 	background-color: white;
 	border: 1px 3px solid $blue;
+	text-align: right;
+
 }
 
 .shadowed:hover {
@@ -258,9 +232,9 @@ h2 {
 
 		img {
 			// position: absolute;
-			padding-left: 100px;
-			width: 170px;
-			height: 70px;
+			padding-left: 5.5em;
+			width: 14.5em;
+			height: 5.5em;
 			opacity: 1;
 		}
 	}
@@ -276,7 +250,7 @@ h2 {
 	font-family: Futura, sans-serif;
 	font-weight: 900;
 	font-size: 5em;
-
+	letter-spacing: 0.1em;
 	background: 50% 100% / 50% 50% no-repeat
 		radial-gradient(ellipse at bottom, $darkest, $blue);
 	webkit-background-clip: text;
@@ -286,8 +260,8 @@ h2 {
 		glow 8000ms linear infinite 8000ms;
 
 	@keyframes reveal {
-	80%{
-		letter-spacing: 8px;
+	80% {
+		letter-spacing: 5px;
 	}
 	100% {
 		background-size: 300% 300%;

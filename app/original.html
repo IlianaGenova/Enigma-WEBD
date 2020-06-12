@@ -11,7 +11,7 @@
 <body>
 	<div class="grid-container">
 		<header class="top-nav">
-			<button class="main" type="button" name="button" onclick="mainRedirect()"><img src="/static/logo.png" alt="Enigma machine" class=""></button>
+			<button class="main" type="button" name="button" onclick="mainRedirect()"><img src="/static/logo.png" alt="Enigma machine" class="logo"></button>
 			<div class="buttons">
 				<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
 				<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png"></button>
@@ -47,7 +47,8 @@
 		<div class="lampboard-text">
 			<div class="info-card">
 			The Enigma's lampboard component is displayed up above on the
-			banner picture.
+			banner picture. This is the output of the machine and displays
+			the corresponding letter, when an input is provided with the right settings
 			</div>
 		</div>
 
@@ -61,6 +62,10 @@
 		<div class="keyboard-text info-card">
 			The Enigma's keyboard component is displayed up above on the
 			banner picture.
+
+			This is used for input if the machine. The German soldiers used this
+			 to enter the coded messages, and when the right settings were set,
+			  the message was decoded correctly
 		</div>
 
 		<div class="plugboard-banner-wrapper banner-wrapper">
@@ -73,7 +78,10 @@
 		<div class="plugboard-text">
 			<div class="info-card">
 			The Enigma's plugboard component is displayed up above on the
-			banner picture.
+			banner picture. The plugboard was the additional encoding added later
+			on which provides a lot more complexity to the cipher. Connecting the plugs
+			 routes the letters - so if A is connected with B, A follows the path of the
+			  letter B in encoding
 			</div>
 		</div>
 
@@ -86,7 +94,9 @@
 		</div>
 		<div class="rotors-text info-card">
 			The Enigma's rotors component is displayed up above on the
-			banner picture.
+			banner picture. This is the core of the machine. Every letter is intertwined
+			with another in these three components, so A never returns an A.
+			The reflector provides  four level deep encoding.
 		</div>
 
 		<footer>
