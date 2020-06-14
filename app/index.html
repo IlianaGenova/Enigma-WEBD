@@ -13,11 +13,39 @@
 		<header class="top-nav">
 			<button class="main" type="button" name="button" onclick="mainRedirect()"><img src="/static/logo.png" alt="Enigma machine" class=""></button>
 
-			<div class="buttons">
-				<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
-				<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png"></button>
-				<button class="button sheet" type="button" name="button" onclick="codeRedirect()">Code sheet <img class="icon" src="/static/icons/copy.png"></button>
-			</div>
+			<nav class="buttons">
+				<ul class="main-menu">
+					<li>
+						<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
+							<ul class="sub-menu manual-menu">
+								<li>
+									<button class="button components" type="button" name="button" onclick="conceptsRedirect()">Components</button>
+									<ul class="sub-menu components-menu">
+										<li>
+											<button class="button lampboard" type="button" name="button" onclick="conceptsRedirect()">Lampboard</button>
+										</li>
+										<li>
+											<button class="button keyboard" type="button" name="button" onclick="projectRedirect()">Keyboard</button>
+										</li>
+										<li>
+											<button class="button plugboard" type="button" name="button" onclick="codeRedirect()">Plugboard</button>
+										</li>
+										<li>
+											<button class="button rotors" type="button" name="button" onclick="codeRedirect()">Core box</button>
+										</li>
+									</ul>
+								</li>
+							</ul>
+					</li>
+					<li>
+						<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png"></button>
+					</li>
+					<li>
+						<button class="button sheet" type="button" name="button" onclick="codeRedirect()">Code sheet <img class="icon" src="/static/icons/copy.png"></button>
+					</li>
+				</ul>
+			</nav>
+
 		</header>
 
 		<div class="title-wrapper">

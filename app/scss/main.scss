@@ -97,6 +97,7 @@ h2 {
 	color: $light-blue;
 	font: 1.5em Futura, sans-serif;
 	text-decoration: none;
+	position: relative;
 
 	background-color: $dark-blue;
 	border: 2px 1px solid $dark-blue;
@@ -358,4 +359,44 @@ $back: $blue;
 		from { width: 0 }
 		to { width: 100% }
 	}
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
+	display: flex;
+
+}
+
+
+
+.sub-menu {
+	position: absolute;
+	display: none;
+}
+
+.manual-menu li {
+	position: relative;
+}
+
+.main-menu>li:hover .manual-menu {
+	display: block;
+}
+
+.manual-menu>li:hover .components-menu {
+	display: block;
+}
+
+.manual-menu {
+
+}
+
+.components-menu {
+	top: 0;
+	right: 0;
+
+	transform: translate(100%, 0);
 }
