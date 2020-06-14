@@ -327,13 +327,13 @@ $back: $blue;
 }
 
 .enigma-pic {
-
-	p {
+	span {
 		margin: 0px;
 		color: $darkest;
 		font: 1.5em Arial, sans-serif;
 		text-decoration: none;
 		letter-spacing: 0.15em;
+		display: block;
 	}
 }
 

@@ -16,7 +16,7 @@
 			<nav class="buttons">
 				<ul class="main-menu">
 					<li>
-						<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png"></button>
+						<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png" alt=" "></button>
 							<ul class="sub-menu manual-menu">
 								<li>
 									<button class="button components" type="button" name="button" onclick="conceptsRedirect()">Components</button>
@@ -38,10 +38,10 @@
 							</ul>
 					</li>
 					<li>
-						<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png"></button>
+						<button class="button my" type="button" name="button" onclick="projectRedirect()">My project <img class="icon" src="/static/icons/innovation.png" alt=" "></button>
 					</li>
 					<li>
-						<button class="button sheet" type="button" name="button" onclick="codeRedirect()">Code sheet <img class="icon" src="/static/icons/copy.png"></button>
+						<button class="button sheet" type="button" name="button" onclick="codeRedirect()">Code sheet <img class="icon" src="/static/icons/copy.png" alt=" "></button>
 					</li>
 				</ul>
 			</nav>
@@ -96,25 +96,24 @@
 
 		</footer>
 	</div>
+
+	<script>
+	    function conceptsRedirect() {
+	      window.location.href = "original.html";
+	    }
+		function projectRedirect() {
+	      window.location.href = "my-project.html";
+	    }
+		function codeRedirect() {
+	      window.location.href = "code-sheet.html";
+	    }
+		function historyRedirect() {
+	      window.location.href = "historical-data.html";
+	    }
+		function mainRedirect() {
+	      window.location.href = "index.html";
+	    }
+	</script>
 </body>
-
-<script>
-    function conceptsRedirect() {
-      window.location.href = "original.html";
-    }
-	function projectRedirect() {
-      window.location.href = "my-project.html";
-    }
-	function codeRedirect() {
-      window.location.href = "code-sheet.html";
-    }
-	function historyRedirect() {
-      window.location.href = "historical-data.html";
-    }
-	function mainRedirect() {
-      window.location.href = "index.html";
-    }
-
-</script>
 
 </html>
