@@ -1,75 +1,38 @@
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var browserSync = require('browser-sync').create()
-//
-// gulp.task('sass', function() {
-//   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-//     .pipe(sass())
-//     .pipe(gulp.dest('app/css'))
-//     .pipe(browserSync.reload({
-//       stream: true
-//     }))
-// });
-//
-// gulp.task('browserSync', function(cb) {
-//   browserSync.init({
-//     server: {
-//       baseDir: 'app'
-//     },
-//   })
-//   cb()
-// })
-//
-// gulp.task('watch', gulp.series(['browserSync', 'sass']), function (){
-//   gulp.watch('app/scss/**/*.scss', gulp.series(['sass']))
-//   // Reloads the browser whenever HTML or JS files change
-//   gulp.watch('app/*.html', browserSync.reload)
-//   gulp.watch('app/js/**/*.js', browserSync.reload)
-//
-// });
-
-
-//
-// gulp.task('watch', function() {
-//   browserSync.init({
-//     server: {
-//       baseDir: 'app'
-//     },
-//   });
-//
-//   gulp.watch('app/scss/**/*.scss', sass);
-//   // Reloads the browser whenever HTML or JS files change
-//   gulp.watch('app/*.html').on('change', browserSync.reload);
-//   gulp.watch('app/js/**/*.js').on('change', browserSync.reload) ;
-// });
-
-
 var gulp = require("gulp"),
     sass = require("gulp-sass"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
     sourcemaps = require("gulp-sourcemaps"),
+	del = require("del"),
     browserSync = require("browser-sync").create();
 
 var paths = {
+    html: {
+        src: './app/**/*.html',
+        dest: './build'
+    },
     styles: {
-        // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
-        src: "src/scss/*.scss",
-        // Compiled files will end up in whichever folder it's found in (partials are not compiled)
-        dest: "src/css"
+        src: "./app/scss/**/*.scss",
+        dest: "./build/css"
+    },
+    images: {
+        src: './app/static/**/*',
+        dest: './build/static'
     }
-
-    // Easily add additional paths
-    // ,html: {
-    //  src: '...',
-    //  dest: '...'
-    // }
 };
 
-function style() {
+const clean = () => del(['./build']);
+
+function html(){
     return gulp
-        .src('app/scss/**/*.scss')
+      .src(paths.html.src)
+      .pipe(gulp.dest(paths.html.dest));
+}
+
+function styles() {
+    return gulp
+        .src(paths.styles.src)
         // Initialize sourcemaps before compilation starts
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -78,58 +41,39 @@ function style() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         // Now add/write the sourcemaps
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('app/css'))
+        .pipe(gulp.dest(paths.styles.dest))
         // Add browsersync stream pipe after compilation
         .pipe(browserSync.stream());
 }
 
-// A simple task to reload the page
-function reload() {
-    browserSync.reload();
+function images(){
+    return gulp
+      .src(paths.images.src)
+      .pipe(gulp.dest(paths.images.dest));
 }
 
-// Add browsersync initialization at the start of the watch task
-function watch() {
+function watchChanges() {
     browserSync.init({
-        // You can tell browserSync to use this directory and serve it as a mini-server
         server: {
-            baseDir: "app/"
+            baseDir: "./build"
         }
-        // If you are already serving your website locally using something like apache
-        // You can use the proxy setting to proxy that instead
-        // proxy: "yourlocal.dev"
     });
-    gulp.watch('app/scss/**/*.scss', style);
-    // We should tell gulp which files to watch to trigger the reload
-    // This can be html or whatever you're using to develop your website
-    // Note -- you can obviously add the path to the Paths object
-    //gulp.watch("src/*.html", reload);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.html.src).on('change', browserSync.reload);
 }
 
-// We don't have to expose the reload function
-// It's currently only useful in other functions
 
+const build = gulp.series(
+    clean,
+    gulp.parallel(styles, images),
+    html
+    );
 
-// Don't forget to expose the task!
+const watch = gulp.series(build, watchChanges);
+
+exports.images = images;
+exports.clean = clean;
+exports.style = styles;
 exports.watch = watch
-
-// Expose the task by exporting it
-// This allows you to run it from the commandline using
-// $ gulp style
-exports.style = style;
-
-/*
- * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
- */
-var build = gulp.parallel(style, watch);
-
-/*
- * You can still use `gulp.task` to expose tasks
- */
-//gulp.task('build', build);
-
-/*
- * Define default task that can be called by just running `gulp` from cli
- */
-gulp.task('default', build);
+exports.build = build;
+exports.default = build;
