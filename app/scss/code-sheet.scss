@@ -4,7 +4,7 @@
 	// height: 100hv;
 	display: grid;
 	grid-template-columns: repeat(3, 5.5%) 35% 1fr 5.5% repeat(3, 13%) 2%;
-	grid-template-rows: 80px 1fr 1fr 70px;
+	grid-template-rows: 80px 700px 1fr 70px;
 	// grid-template-areas:
 	// 	"topnav topnav topnav topnav topnav";
 
@@ -133,6 +133,7 @@ body {
 
 }
 
+
 p {
 	margin-top: 30px;
     font-family: font(family);
@@ -146,7 +147,7 @@ p {
 	opacity: 0.6;
 	border-bottom: 2px 1.5px solid $text-blue;
 	font-size: 26px;
-	margin: 10px 0px;
+	margin: 2em 0px;
 }
 .letter {
 
