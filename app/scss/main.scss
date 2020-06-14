@@ -74,14 +74,6 @@ body {
 	box-sizing: border-box;
 }
 
-h2 {
-	margin: 0px;
-	color: $darkest;
-	font: 1.5em Arial, sans-serif;
-	text-decoration: none;
-	letter-spacing: 0.15em;
-}
-
 .icon, .button {
 	display: flex;
     justify-content: center;
@@ -332,6 +324,17 @@ $back: $blue;
 	// @for $i from 1 through $n{
 	// 	&:nth-last-child(#{$i}n){ animation-delay: -$t*$i/$n/2;}
 	// }
+}
+
+.enigma-pic {
+
+	p {
+		margin: 0px;
+		color: $darkest;
+		font: 1.5em Arial, sans-serif;
+		text-decoration: none;
+		letter-spacing: 0.15em;
+	}
 }
 
 .enigma {
