@@ -1,7 +1,15 @@
 # Enigma-WEBD
-A site to explain the perfect complexity of the Enigma machine in details
 
-# A school project.
+### A school project hosted on [Vercel](https://enigma-machine-info-site.now.sh/)
+
+A site to explain the perfect complexity of the Enigma machine in details.
+
+If you're interested, check out my Enigma project [here](https://www.tuesfest.bg/projects/25)
+It was made with plenty of help from TUES :)
+
+Detailed presentation could also be found on the upper link.
+
+![](app/static/main.png)
 
 
 # Must use:
@@ -9,7 +17,7 @@ A site to explain the perfect complexity of the Enigma machine in details
 2. Sass for source files
 3. If JS - ES6+ with Babel
 4. Flex or grid for layouts
- 
+
 # Requirements
 * Host the code as on GitHub
 * Host the site itself on free services like github sites for easy preview
@@ -23,7 +31,7 @@ A site to explain the perfect complexity of the Enigma machine in details
 * Must use proper HTML5 semantic tags
 * Must have proper README.md in the repository that explains the project and provides a screenshot from the homepage.
 * Class names must be lower case, dash separated
- 
+
 # Bonus points:
 Bonus points will add to your final score if you are off by a little:
 * JS interactivity (in a well written JS code).
