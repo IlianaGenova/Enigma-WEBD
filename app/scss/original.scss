@@ -71,6 +71,7 @@
 	.lampboard-title {
 		grid-column: 3/6;
 		grid-row: 6/7;
+		margin: 0.5em;
 	}
 	.lampboard-pic {
 		grid-column: 3/6;
@@ -89,6 +90,7 @@
 		grid-column: 6/10;
 		grid-row: 6/8;
 		text-align: center;
+		text-align: right;
 
 		.info-card {
 			float: right;
@@ -107,6 +109,7 @@
 
 		text-align: right;
 		padding-right: 0.5em;
+		margin: 0.5em;
 	}
 	.keyboard-pic {
 		grid-column: 7/10;
@@ -125,6 +128,7 @@
 	.keyboard-text {
 		grid-column: 3/5;
 		grid-row: 10/11;
+		text-align: left;
 	}
 
 	.plugboard-banner-wrapper {
@@ -134,6 +138,7 @@
 	.plugboard-title {
 		grid-column: 3/5;
 		grid-row: 14/15;
+		margin: 0.5em;
 	}
 	.plugboard-pic {
 		grid-column: 3/5;
@@ -152,6 +157,7 @@
 		grid-column: 6/10;
 		grid-row: 14/16;
 		text-align: center;
+		text-align: right;
 
 		.info-card {
 			float: right;
@@ -167,7 +173,7 @@
 		grid-row: 18/19;
 		text-align: right;
 		padding-right: 0.5em;
-
+		margin: 0.5em;
 	}
 	.rotors-pic {
 		grid-column: 7/10;
@@ -186,6 +192,8 @@
 	.rotors-text {
 		grid-column: 3/5;
 		grid-row: 18/20;
+
+		text-align: left;
 	}
 }
 
