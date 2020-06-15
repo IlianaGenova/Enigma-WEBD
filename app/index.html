@@ -19,7 +19,11 @@
 						<button class="button manual" type="button" name="button" onclick="conceptsRedirect()">Manual <img class="icon" src="/static/icons/writer.png" alt=" "></button>
 							<ul class="sub-menu manual-menu">
 								<li>
-									<button class="button components" type="button" name="button" onclick="conceptsRedirect()">Components</button>
+									<button class="button basic" type="button" name="button" onclick="basicsRedirect()">Showcase</button>
+								</li>
+
+								<li class="components">
+									<button class="button " type="button" name="button" onclick="conceptsRedirect()">Components</button>
 									<ul class="sub-menu components-menu">
 										<li>
 											<button class="button lampboard" type="button" name="button" onclick="conceptsRedirect()">Lampboard</button>
@@ -120,6 +124,9 @@
 		function mainRedirect() {
 	      window.location.href = "index.html";
 	    }
+		function basicsRedirect() {
+		  window.location.href = "showcase.html";
+		}
 	</script>
 
 </body>

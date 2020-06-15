@@ -1,0 +1,20 @@
+@import "main";
+
+body {
+	font-size: 25px;
+	color: $text-blue;
+	display: flex;
+	flex-direction: column;
+	flex-flow: column;
+	// flex-wrap: nowrap;
+	// align-items: center;
+	// justify-content:space-around;
+	text-align: center;
+}
+
+.buttons, ul, ol {
+	margin: 0 auto;
+	padding: 0 auto;
+	// text-align: center;
+	width: 25%;
+}
