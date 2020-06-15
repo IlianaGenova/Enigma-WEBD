@@ -4,7 +4,7 @@
 	// height: 100hv;
 	display: grid;
 	grid-template-columns: repeat(3, 5.5%) 35% 1fr 5.5% repeat(3, 13%) 2%;
-	grid-template-rows: 80px 600px 70px;
+	grid-template-rows: 80px 550px 100px 1fr 70px;
 	// grid-template-areas:
 	// 	"topnav topnav topnav topnav topnav";
 
@@ -31,16 +31,31 @@
 
 	}
 
-	// .banner-wrapper {
-	// 	grid-column: 1/11;
-	// 	grid-row: 4/5;
-	//
-	// 	position: relative;
-	// 	text-align: center;
-	// 	font: 1.2em Arial, sans-serif;
-	// 	text-decoration: none;
-	//
-	// }
+	.banner-wrapper {
+		grid-column: 1/11;
+		grid-row: 4/5;
+
+		position: relative;
+		text-align: center;
+		font: 1.2em Arial, sans-serif;
+		text-decoration: none;
+
+		.banner {
+			opacity: 0.85;
+			width: 100%;
+		}
+
+	}
+
+	.info-card {
+		grid-column: 1/11;
+		grid-row: 2/3;
+
+		margin: 3em auto;
+		width: 25em;
+		height: 15em;
+		text-align: left;
+	}
 
 	// .title-wrapper {
 	// 	grid-column: 3/5;
@@ -70,7 +85,7 @@
 
 footer {
 	grid-column: 1/11;
-	grid-row: 3/4;
+	grid-row: 5/6;
 	background-color: $dark-blue;
 	opacity: 0.7;
 	display: flex;
